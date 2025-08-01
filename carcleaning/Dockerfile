@@ -1,5 +1,5 @@
 # Use Node.js base image with latest LTS and security patches
-FROM node:18.20-alpine3.19
+FROM node:18.20.3-alpine3.19
 
 
 WORKDIR /app
