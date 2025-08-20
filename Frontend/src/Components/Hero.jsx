@@ -43,7 +43,8 @@ function Hero() {
         <div className="absolute inset-0 bg-opacity-70"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-white">
-          <div height-20 py-24 px-6></div>
+        <div className="h-20 py-24 px-6"></div>
+
           {/* Heading and Button */}
           <motion.h1
             initial={{ x: -300, opacity: 0 }}
