@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./Backend
+    container_name: car-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./Backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  frontend:
+    build: ./Frontend
+    container_name: car-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
